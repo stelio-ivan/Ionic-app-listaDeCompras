@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Add Producto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+    <form #productoForm="ngForm" (ngSubmit)="saveProducto(productoForm)">
+  
+      <ion-item>
+        
+        <ion-label color="primary">Nome</ion-label>
+        <ion-input name="nome" type="text"  ngModel></ion-input>
+      </ion-item>
+ 
+  
+
+        
+      
+  
+      <ion-item>
+       
+        <ion-label color="primary">quantidade</ion-label>
+        <ion-input name="qtd" type="number"  ngModel required pattern="[0-9]+"></ion-input>
+      </ion-item>
+  
+ 
+  
+      <!-- TO DO Collect data for 'Director', 'Stars' e 'Genre' -->
+  
+      <div padding>
+        <ion-button size="large" type="submit"  expand="block">Gravar</ion-button>
+      </div>
+    </form>
+  
+  </ion-content>

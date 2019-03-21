@@ -1,0 +1,16 @@
+[
+    {
+      
+      "nome": "camisola",
+      "quantidade": 2,
+      "adquirido":false
+    },
+    {
+      
+        "nome": "chuteiras sintético",
+        "quantidade": 3,
+        "adquirido":false
+      }
+  
+  ]
+  
