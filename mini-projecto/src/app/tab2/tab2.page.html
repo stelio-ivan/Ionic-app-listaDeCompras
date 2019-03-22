@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Bought
-    </ion-title>
+    <ion-title >
+      <ion-icon name="basket" > </ion-icon>
+      Cesto
+     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let producto of productosAdquiridos" >
+      <ion-card>
+       <ion-item>
+         <ion-text >
+             <h2>{{ producto.nome }}</h2>
+           </ion-text>
+       </ion-item>
+      <ion-card-content>
+         <b>Descricao:</b> {{producto.descricao}}
+      </ion-card-content>
+       <ion-card-content>
+        <b> Quantidade:</b> {{producto.qtd}}
+       </ion-card-content>
+
+     </ion-card>
+
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>

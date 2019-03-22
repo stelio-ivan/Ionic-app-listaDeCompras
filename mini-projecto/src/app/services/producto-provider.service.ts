@@ -8,12 +8,13 @@ import { Producto } from '../model/producto';
     providedIn: 'root'
   })
   export class ProductoProviderService {
-  
+
     private productos: Array<Producto>;
-    filterData :Array<Producto>;
-  
+    private produtosAdquiridos :Array<Producto>;
+
     constructor(private http: Http, private events : Events) {
       this.productos = [];
+      this.productosAdquiridos=[]
     }
 
     public getProducto(nome : string) {
@@ -32,6 +33,10 @@ import { Producto } from '../model/producto';
         return productoFound;
     }
 
+
+
+
+
     public getProductos() {
         // Lazy loading of data within object instance
         if (this.productos.length == 0) {
@@ -40,13 +45,24 @@ import { Producto } from '../model/producto';
         return this.productos;
       }
 
+      public getProductosAdquiridos() {
+
+          return this.productosAdquiridos;
+        }
+
+        public saveAdquirido(producto:Producto){
+            console.log("Producto '" + producto.nome + " adquirido  salvo");
+            this.productosAdquiridos.push(producto);
+            console.log(this.productosAdquiridos[0].nome);
+        }
+
       notifyDataChange() {
         // More info on how to use Events at https://ionicframework.com/docs/api/util/Events/
         this.events.publish('producto-data-changed');
         console.log("Publishing event 'producto-data-changed'");
       }
 
-      
+
       public save(producto: Producto) {
         this.productos.push(producto);
         console.log("Producto '" + producto.nome + "' saved in-memory!");
@@ -72,8 +88,16 @@ import { Producto } from '../model/producto';
           }
         );
     }
-         
- 
- 
- 
+
+    deleteAdquirido(producto:Producto){
+      let index = this.productosAdquiridos.indexOf(producto);
+
+      if(index > -1){
+        this.productosAdquiridos.splice(index, 1);
+      }
+    }
+
+
+
+
  }

@@ -26,7 +26,7 @@
        </ion-card-content>
        <ion-card-content>
          <ion-item>
-            <b> Adicionado ao cesto: </b>   <ion-toggle color="primary" size="small"  slot="end"></ion-toggle>
+              <ion-toggle   (ionChange)="toogleAdquirido(producto)"   color="secondary"></ion-toggle>
          </ion-item>
 
 
@@ -35,7 +35,7 @@
 
 
 
-    <ion-item-options side="end" color="ff0000">
+    <ion-item-options side="end" color="red">
 
       <button ion-button (click)="delete(producto)">
           <ion-icon name="trash"></ion-icon>Delete

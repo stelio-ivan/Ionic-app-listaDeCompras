@@ -25,17 +25,18 @@ export class AddProductoPage implements OnInit {
       console.log("Valid form submitted.");
       // Create producto object
       let newProducto = new Producto(
-      
+
         productoForm.value.nome,
         productoForm.value.qtd,
         false,
         productoForm.value.descricao
-       
+
       );
+
       // Save producto in provider and publish change
       this.productosProvider.save(newProducto);
       this.productosProvider.notifyDataChange();
-
+          console.log(productoForm.nome+"nome")
       // Show notification and log
       console.log("Producto '" + newProducto.nome + "' Saved!")
       this.presentToast("Producto '" + newProducto.nome + "' Saved!");

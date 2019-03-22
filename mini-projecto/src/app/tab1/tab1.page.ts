@@ -10,7 +10,7 @@ import { Producto } from '../model/producto';
 })
 export class Tab1Page {
   public productos: Array<Producto>;
-  
+
 
   constructor(private productosProvider: ProductoProviderService, private events : Events) { }
 
@@ -40,7 +40,7 @@ export class Tab1Page {
   }
 
   delete(producto: Producto){
-    console.log("pRODUCTO " + producto.nome+ " removido" );
+    console.log("PRODUCTO " + producto.nome+ " removido" );
     let index = this.productos.indexOf(producto);
 
     if(index > -1){
@@ -49,16 +49,21 @@ export class Tab1Page {
 
   }
 
-  toogleAdquirido(){
-   // console.log("roduto'" + this.+ "' " + (this.movie.wished?"in wishlist":"not in wishlist") + " and " + (this.movie.watched?"in watchlist":"not in watchlist"));
+  toogleAdquirido(producto: Producto){
+
+   if (producto.adquirido==false){
+        producto.adquirido=true
+        this.productosProvider.saveAdquirido(producto);
+
+   }else{
+     producto.adquirido=false
+     this.productosProvider.deleteAdquirido(producto);
+
+   }
+
+
   }
 
 
+
 }
-
-
-
-
-
-
-
