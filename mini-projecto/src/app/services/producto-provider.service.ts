@@ -61,7 +61,7 @@ import { Producto } from '../model/producto';
           data => {
             for (let i=0; i < data.length; ++i) {
               this.productos.push(
-                new Producto( data[i].nome,data[i].qtd, data[i].adquirido)
+                new Producto( data[i].nome,data[i].qtd, data[i].adquirido, data[i].descricao)
               );
             }
             console.log("Data loaded successfully.");

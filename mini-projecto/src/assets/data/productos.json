@@ -1,16 +1,34 @@
 [
     {
-      
-      "nome": "camisola",
-      "quantidade": 2,
-      "adquirido":false
+
+      "nome": "sapatilha",
+      "qtd": 2,
+      "adquirido":false,
+      "descricao":"PUMA SAPATILHA SMASH PERF SD"
+
     },
     {
-      
-        "nome": "chuteiras sintético",
-        "quantidade": 3,
-        "adquirido":false
-      }
-  
+
+        "nome": "Camisola",
+        "qtd": 3,
+        "adquirido":false,
+        "descricao":"FILA SWEAT CAMISOLA RAYTON"
+      },
+
+      {
+
+          "nome": "bola",
+          "qtd": 1,
+          "adquirido":false,
+          "descricao":"FILA BOLA FUTEBOL S5"
+        },
+
+        {
+
+            "nome": "T-SHIRT",
+            "qtd": 6,
+            "adquirido":false,
+            "descricao":"CONVERSE T-SHIRT TEE"
+        }
+
   ]
-  

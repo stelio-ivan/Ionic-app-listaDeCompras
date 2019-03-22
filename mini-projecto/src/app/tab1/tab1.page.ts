@@ -49,6 +49,10 @@ export class Tab1Page {
 
   }
 
+  toogleAdquirido(){
+   // console.log("roduto'" + this.+ "' " + (this.movie.wished?"in wishlist":"not in wishlist") + " and " + (this.movie.watched?"in watchlist":"not in watchlist"));
+  }
+
 
 }
 

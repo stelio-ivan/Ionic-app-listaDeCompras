@@ -4,9 +4,12 @@ export class Producto {
   
       public nome: string,
       public qtd: number,
-      public adquirido: boolean) {
+      public adquirido: boolean,
+      public descricao: string
+      ) {
     }
 
+  
   
   
   }

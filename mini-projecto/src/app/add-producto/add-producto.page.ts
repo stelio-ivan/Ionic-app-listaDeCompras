@@ -29,6 +29,7 @@ export class AddProductoPage implements OnInit {
         productoForm.value.nome,
         productoForm.value.qtd,
         false,
+        productoForm.value.descricao
        
       );
       // Save producto in provider and publish change
